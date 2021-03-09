@@ -2,7 +2,7 @@
 #! /bin/bash -x
 head=0
 tail=1
-for(( i=0; i<20; i++ ))
+for(( i=0; i<=21; i++ ))
 do
 	s=$(( RANDOM%2 ))
 	
@@ -18,8 +18,16 @@ done
 echo ${s[@]}
 
 
-for index in ${!s[@]}
+for index in ${!i[@]}
 do
-	echo "head"  "count is" ${s[$index]}
-	echo "tail" "count is" ${s[$index]}
+	echo "head"  "count is" ${i[$index]}
+	echo "tail" "count is" ${i[$index]}
 done
+	if [ ${!i[@]} -eq 0 ]
+	then 
+		echo "match won by" $s
+	else
+		echo "match tie by" $s
+	fi
+
+
