@@ -5,7 +5,7 @@ tail=1
 for(( i=0; i<20; i++ ))
 do
 	s=$(( RANDOM%2 ))
-	echo $s
+	
 		if [ $s -eq 0 ]
 		then
 			echo "it is a head"
@@ -13,4 +13,13 @@ do
 			echo "it is a tail"
 		fi
 
+
+done
+echo ${s[@]}
+
+
+for index in ${!s[@]}
+do
+	echo "head"  "count is" ${s[$index]}
+	echo "tail" "count is" ${s[$index]}
 done
