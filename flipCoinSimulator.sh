@@ -30,4 +30,8 @@ done
 		echo "match tie by" $s
 	fi
 
-
+		if [ ${!i[@]} -ne 0 ]
+		then
+			echo "difference of two points"
+		break
+		fi
